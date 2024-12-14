@@ -23,30 +23,31 @@ const ProductCard = ({rating, image, name, price , description }:Props) => {
   };
 
   return (
-    <div className='flex flex-col w-[350px] justify-center items-center mx-auto h-[600px] bg-secondary rounded-lg overflow-hidden'>
-      <div className='bg-secondary h-[250px] flex items-center rounded-lg justify-center p-4'>
+    <div className="flex flex-col w-full justify-center items-center mx-auto h-[550px] bg-secondary rounded-lg overflow-hidden">
+      <div className="bg-secondary h-[250px] flex items-center rounded-lg justify-center p-4">
         <img
-          className='max-w-full max-h-full object-contain'
+          className="max-w-full max-h-full object-contain"
           src={image}
           alt="Wireless Buds"
         />
       </div>
-      
-      <div className='p-4 flex-grow flex flex-col justify-between'>
-        <div>
 
-            <h2 className='font-semibold text-text text-lg'>{name}</h2>
-          <p className='text-text text-sm mb-2'>{description}</p>
-          
-          <div className='flex  justify-between items-center mt-8'>
-          <div className='flex items-center space-x-1 '>
-            {renderStars(rating)}
-            <span className='text-text text-sm ml-2'>({rating}/5)</span>
+      <div className="p-4 flex-grow flex flex-col justify-between">
+        <div>
+          <h2 className="font-semibold text-text text-lg">{name}</h2>
+          <p className="text-text text-sm mb-2">{description}</p>
+
+          <div className="flex  justify-between items-center mt-8">
+            <div className="flex items-center space-x-1 ">
+              {renderStars(rating)}
+              <span className="text-text text-sm ml-2">({rating}/5)</span>
+            </div>
+            <span className="font-semibold text-text text-xl">
+              ${`${price}`}
+            </span>
           </div>
-          <span className='font-semibold text-text text-xl'>${`${price}`}</span>
         </div>
-        </div>
-          
+
         {/* <button
           className='
             bg-[#66B29B]

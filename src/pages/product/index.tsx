@@ -102,7 +102,7 @@ useEffect(() => {
             </div>
           </div>
         </div>
-        <div className="px-2 md:px-8 py-8 grid grid-cols-1 items-center gap-4 my-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="px-2 md:px-2 py-8 grid grid-cols-1 gap-6 md:gap-[1.5rem] my-4 md:grid-cols-2 lg:grid-cols-3 ">
           {products.length > 0 ? (
             products.map((product) => (
               <div key={product.id}>
